@@ -121,6 +121,7 @@ body::before {
 
 .plan__btn:hover,
 .plan__btn:focus {
+  text-decoration: none;
   color: hsl(244.51, 82.61%, 68.43%);
 }
 
