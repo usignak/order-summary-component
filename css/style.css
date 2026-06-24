@@ -48,7 +48,7 @@ body::before {
 }
 
 .card__text {
-  padding: 50px;
+  padding: 35px 24px;
   text-align: center;
 }
 
@@ -69,8 +69,11 @@ body::before {
   background-color: hsl(225, 100%, 98%);
   border-radius: 10px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 20px;
   margin-bottom: 24px;
 }
@@ -155,8 +158,20 @@ body::before {
   color: hsl(223, 47%, 23%);
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 365px) {
+  .plan {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
+@media screen and (min-width: 450px) {
   body::before {
     background: url("../images/pattern-background-desktop.svg") no-repeat bottom/cover;
+  }
+
+  .card__text {
+    padding: 50px;
   }
 }
