@@ -1,0 +1,162 @@
+:root {
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: hsl(223, 47%, 23%);
+  background: hsl(225, 100%, 94%);
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Red Hat Display", sans-serif;
+  padding: 70px 20px;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  height: 50%;
+  background: url("../images/pattern-background-mobile.svg") no-repeat bottom/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.card {
+  width: 100%;
+  max-width: 450px;
+  background-color: hsl(0, 100%, 100%);
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+.card__image {
+  width: 100%;
+  background: url("../images/illustration-hero.svg") no-repeat center/cover;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  aspect-ratio: 16 / 9;
+}
+
+.card__text {
+  padding: 50px;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 24px;
+  line-height: 1;
+}
+
+.text {
+  color: hsl(224, 23%, 55%);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.plan {
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.plan__icon {
+  width: 50px;
+  height: 50px;
+  background-color: hsl(225, 100%, 94%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.plan__price {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.plan__price strong {
+  font-weight: 900;
+}
+
+.plan__price span {
+  color: hsl(224, 23%, 55%);
+}
+
+.plan__btn {
+  color: hsl(245, 75%, 52%);
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color .2s;
+}
+
+.plan__btn:hover,
+.plan__btn:focus {
+  color: hsl(244.51, 82.61%, 68.43%);
+}
+
+.btn-payment {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  color:hsl(225, 100%, 98%);
+  background-color: hsl(245, 75%, 52%);
+  font-weight: 900;
+  box-shadow: 0 20px 20px hsla(245, 75%, 52%, .2);
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+.btn-payment:hover,
+.btn-payment:focus {
+  background-color: hsl(244.51, 82.61%, 68.43%);
+}
+
+.btn-cancel {
+  background-color: transparent;
+  border: none;
+  color: hsl(224, 23%, 55%);
+  font-weight: 900;
+  cursor: pointer;
+  transition: color .2s;
+}
+
+.btn-cancel:hover,
+.btn-cancel:focus {
+  color: hsl(223, 47%, 23%);
+}
+
+@media screen and (min-width: 375px) {
+  body::before {
+    background: url("../images/pattern-background-desktop.svg") no-repeat bottom/cover;
+  }
+}
